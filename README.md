@@ -27,12 +27,12 @@ https://huggingface.co/thxplz/HOI-R1_Qwen2.5-VL-3B-Instruct
 
 ## 🛠 TODO
 
-- [ ] Release training code  
-- [ ] Release inference & evaluation scripts  
-- [ ] Add dataset preprocessing pipeline  
+- [ ] Add qualitative visualization examples
+- [ ] Release inference & evaluation scripts
+- [ ] Add dataset preprocessing pipeline
 - [ ] Provide detailed training configuration and hyperparameters  
-- [ ] Add qualitative visualization examples  
-- [ ] Release additional model variants (larger scales / ablations)
+- [ ] Release training code
+- [ ] Release additional model variants
 
 ---
 
