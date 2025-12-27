@@ -1,14 +1,49 @@
 # HOI-R1: Exploring the Potential of Multimodal Large Language Models for Human-Object Interaction Detection
 
-[arXiv](https://arxiv.org/abs/2510.05609),  [huggingface](https://huggingface.co/thxplz/HOI-R1_Qwen2.5-VL-3B-Instruct)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.05609-b31b1b.svg)](https://arxiv.org/abs/2510.05609)
+[![Hugging Face](https://img.shields.io/badge/🤗%20HuggingFace-Model-yellow)](https://huggingface.co/thxplz/HOI-R1_Qwen2.5-VL-3B-Instruct)
 
-## Reference
+This repository contains the official resources for **HOI-R1**, a research project that explores the potential of **Multimodal Large Language Models (MLLMs)** for **Human-Object Interaction (HOI) Detection**.
 
-```text
+HOI-R1 is inspired by recent advances in reinforcement learning for large language models and investigates how vision-language models can reason about and detect human-object interactions more effectively.
+
+---
+
+## 🔍 Overview
+
+- **Task**: Human-Object Interaction Detection (HOID)
+- **Our Motivation**:  
+  Leverage the reasoning capability of Multimodal LLMs and reinforcement learning–style optimization to explore HOI detection performance.
+---
+
+## 🤗 Model Weights
+
+Pretrained model checkpoints are available on Hugging Face:
+
+👉 **HOI-R1_Qwen2.5-VL-3B-Instruct**  
+https://huggingface.co/thxplz/HOI-R1_Qwen2.5-VL-3B-Instruct
+
+---
+
+## 🛠 TODO
+
+- [ ] Release training code  
+- [ ] Release inference & evaluation scripts  
+- [ ] Add dataset preprocessing pipeline  
+- [ ] Provide detailed training configuration and hyperparameters  
+- [ ] Add qualitative visualization examples  
+- [ ] Release additional model variants (larger scales / ablations)
+
+---
+
+## 📌 Citation
+
+If you find this work useful, please consider citing:
+
+```bibtex
 @article{chen2025hoi,
   title={HOI-R1: Exploring the Potential of Multimodal Large Language Models for Human-Object Interaction Detection},
   author={Chen, Junwen and Xiong, Peilin and Yanai, Keiji},
   journal={arXiv preprint arXiv:2510.05609},
   year={2025}
 }
-```
