@@ -14,11 +14,14 @@ HOI-R1 is inspired by recent advances in reinforcement learning for large langua
 - **Task**: Human-Object Interaction Detection (HOID)
 - **Our Motivation**:  
   Leverage the reasoning capability of Multimodal LLMs and reinforcement learning–style optimization to explore HOI detection performance.
+
+![hoi-r1-arch](https://cdn-uploads.huggingface.co/production/uploads/63119ce2fb65b9a3e2f75e3c/tHYWwrnqBAHsoo8lIOtnM.jpeg)
+
 ---
 
 ## 🤗 Model Weights
 
-Pretrained model checkpoints are available on Hugging Face:
+Model checkpoints are available on Hugging Face:
 
 👉 **HOI-R1_Qwen2.5-VL-3B-Instruct**  
 https://huggingface.co/thxplz/HOI-R1_Qwen2.5-VL-3B-Instruct
