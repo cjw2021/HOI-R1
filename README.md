@@ -81,6 +81,22 @@ Predictions are written as `pred_<task_id>_<timestamp>.json` files containing
 the raw model `outputs`, parsed `preds`, and corresponding `gt_paths`.
 Post-processing of the raw model output is handled by `postprocess.py`.
 
+**Merge predictions**
+
+Since inference is split across GPUs (and optionally sections), the per-process
+prediction files need to be merged into a single `merged_output.json` before
+metric computation:
+
+```bash
+python merge_results.py --folder_path ./evaluate_predictions/hoi-r1
+```
+
+This recursively gathers every `pred_*.json` under `--folder_path`, removes
+duplicate images, and writes `merged_output.json` into that folder. Pass `--re`
+to re-run post-processing on the stored raw `outputs` instead of reusing the
+already-parsed `preds`. The merged file can also be fed back to
+`eval_qwen3.py` via `--existing_merged_json` to resume an interrupted run.
+
 ---
 
 ## 🛠 TODO
