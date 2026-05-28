@@ -44,7 +44,7 @@ into sections so the evaluation can be split across multiple machines/runs.
 **Requirements**
 
 ```bash
-pip install torch transformers pillow numpy tqdm
+pip install torch transformers pillow numpy tqdm loguru
 # flash-attention is used by default (attn_implementation="flash_attention_2")
 pip install flash-attn --no-build-isolation
 ```
@@ -96,6 +96,24 @@ duplicate images, and writes `merged_output.json` into that folder. Pass `--re`
 to re-run post-processing on the stored raw `outputs` instead of reusing the
 already-parsed `preds`. The merged file can also be fed back to
 `eval_qwen3.py` via `--existing_merged_json` to resume an interrupted run.
+
+**Compute mAP**
+
+`hico_eval.py` computes the standard HICO-DET mAP (Default and Known-Object
+settings, with Full / Rare / Non-Rare breakdowns) from the merged predictions:
+
+```bash
+python hico_eval.py \
+    --json_path ./evaluate_predictions/hoi-r1/merged_output.json \
+    --out_dir ./eval_results/hoi-r1 \
+    --dataset_path /path/to/HICO_Det
+```
+
+`--dataset_path` is the HICO-DET root and must contain `images/test2015` and an
+`annotations/` folder with the standard evaluation files (`anno_list.json`,
+`hoi_list_new.json`, `file_name_to_obj_cat.json`, `hoi_id_to_num.json`,
+`corre_hico.npy`). Per-class APs are written as JSON to `--out_dir`, and the
+summary mAPs are logged to the console.
 
 ---
 
